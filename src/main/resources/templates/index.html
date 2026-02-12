@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Ecommerce</title>
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<h1>Products</h1>
-<a href="/add">Add Product</a>
+<nav>
+    <h2>E-Commerce</h2>
+    <div>
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/cart">Cart</a>
+        <a href="/login">Login</a>
+    </div>
+</nav>
 
-<div th:each="product : ${products}">
-    <h3 th:text="${product.name}"></h3>
-    <p th:text="${product.description}"></p>
-    <p th:text="${product.price}"></p>
-    <img th:src="@{${product.imagePath}}" width="150"/>
-    <hr/>
-</div>
+<section class="hero">
+    <h1>Welcome to Our Store</h1>
+    <p>Simple • Secure • Stylish</p>
+    <a href="/shop" class="btn">Shop Now</a>
+</section>
+
+<footer>
+    © 2026 College E-Commerce Project
+</footer>
 
 </body>
 </html>
